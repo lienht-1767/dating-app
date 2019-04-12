@@ -48,3 +48,15 @@ build-iPhoneSimulator/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+/test/*
+/config/storage.yml
+/config/master.key
+/config/database.yml
+/config/credentials.yml.enc
+/log/development.log
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+/public/uploads/*
+/.byebug_history
+log/test.log
