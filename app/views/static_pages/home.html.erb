@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="block-1"></div>
+  <div class="teaser animated">
+    <h1><%= t ".title" %></h1>
+    <h4 class="tagline"><%= t ".h4" %></h4>
+    <div class="text-shadow-light">
+      <%= t ".text" %>
+    </div>
+    <div class="mt-4" style="min-width: 300px;">
+      <button class="btn btn-primary btn-prominent btn-lg btn-block btn-brand
+      trigger-signin-modal hover-grow" type="button">
+        <%= t ".sign_in" %>
+      </button>
+      <p><%= t ".or" %></p>
+      <button class="btn btn-primary btn-prominent btn-lg btn-block btn-brand
+      trigger-signin-modal hover-grow" type="button">
+        <%= t ".sign_up" %>
+      </button>
+    </div>
+  </div>
+  <%= render "static_pages/block-2" %>
+  <%= render "static_pages/block-3" %>
+  <% yield %>
+</div>

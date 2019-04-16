@@ -8,8 +8,13 @@
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
   </head>
-
   <body>
+    <div class="header col-md-12">
+      <%= render "static_pages/header" %>
+    </div>
     <%= yield %>
+    <div class="header col-md-12">
+      <%= render "static_pages/footer" %>
+    </div>
   </body>
 </html>

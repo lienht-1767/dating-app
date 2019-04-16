@@ -1,4 +1,17 @@
-/*
- *= require_tree .
- *= require_self
- */
+@import 'bootstrap.min';
+@import 'bootstrap-fileinput';
+@import 'bootstrap-switch.min';
+@import 'checkout';
+@import 'font-awesome.min';
+@import 'metisMenu.min';
+@import 'morris';
+@import 'owl.carousel.min';
+@import 'owl.theme.min';
+@import 'responsive';
+@import 'style';
+@import 'custom-style';
+@import 'font-awesome.min';
+@import 'sb-admin-2';
+@import 'style';
+@import 'theme';
+@import 'custom';
