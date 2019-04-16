@@ -12,19 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2019_04_13_163042) do
 
-  create_table "block_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_block_users_on_user_id"
-  end
-
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.string "title"
     t.string "summary"
     t.string "content"
-    t.boolean "status"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_blogs_on_user_id"
@@ -43,14 +36,6 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "grades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.integer "grade"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_grades_on_user_id"
-  end
-
   create_table "information_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "interested_in_gender_id"
     t.bigint "gender_id"
@@ -65,7 +50,7 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
     t.integer "education"
     t.integer "religion"
     t.integer "children"
-    t.boolean "relationship_status"
+    t.integer "relationship_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gender_id"], name: "index_information_users_on_gender_id"
@@ -135,10 +120,8 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "block_users", "users"
   add_foreign_key "blogs", "users"
   add_foreign_key "conversations", "users"
-  add_foreign_key "grades", "users"
   add_foreign_key "information_users", "interested_in_genders"
   add_foreign_key "interested_in_genders", "genders"
   add_foreign_key "interested_in_relations", "relationship_types"
