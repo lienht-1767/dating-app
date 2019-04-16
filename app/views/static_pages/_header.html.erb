@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <%= link_to "#", class: "navbar-brand" do %>
+      <%= image_tag Settings.image_header %><%=  t ".title" %>
+    <% end %>
+  </div>
+  <ul class="nav navbar-top-links navbar-right">
+    <li class="nav-item">
+      <%= link_to t(".blogs"), "#" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t(".sign_in"), "#" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to t(".sign_up"), "#" %>
+    </li>
+  </ul>
+  <div class="clearfix"></div>
+</nav>

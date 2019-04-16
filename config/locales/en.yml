@@ -1,1 +1,49 @@
 en:
+  application:
+    title: "Dating"
+  layouts:
+    admin:
+      header:
+        title: "Admin Dating app"
+        change_password: "Change password"
+        log_out: "Logout"
+        home: "Home"
+        username: "Username"
+      sidebar:
+        relationship: "Relationship"
+        manage_content: "MANAGE CONTENT"
+        blogs: "Blogs"
+        genders: "Genders"
+        users: "Users"
+      footer:
+        title: "Dating app - Design by Lien and Phuong Anh"
+  static_pages:
+    header:
+      title: "Dating"
+      blogs: "Blogs"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+    block-2:
+      title: "Meet New People"
+      text-1: "Datingapp is a great way to meet new people in your area
+        , or ✈️ anywhere in the world 🌎."
+      text-2: "Here are some of our 🔥 most popular locations ❤️ for dating"
+      philip_dating: "Philippines Dating"
+      summary: "Filipina Beauties from All over the 7,000 Islands"
+    block-3:
+      h2: "What is Dating?"
+      description_1: "Dating is a social dating site connecting people
+        from all around the world from different walks of life."
+      description_2: "Dating is a great way to make friends, chat with new
+        people, and even start a romantic relationship."
+      description_3: "We strive to make it as easy safe as possible for
+        people to make meaningful connections."
+    home:
+      title: "Dating"
+      h4: "Chat - Meet - Flirt"
+      text: "Meet cool new people near you and all over the world"
+      or: "OR"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+    footer:
+      title: "Dating app - Design by Lien and Phuong Anh"
