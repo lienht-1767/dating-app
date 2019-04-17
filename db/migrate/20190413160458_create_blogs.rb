@@ -5,7 +5,7 @@ class CreateBlogs < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :summary
       t.string :content
-      t.boolean :status
+      t.integer :status
 
       t.timestamps
     end

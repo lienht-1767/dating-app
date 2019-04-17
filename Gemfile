@@ -18,8 +18,21 @@ gem "i18n"
 gem "i18n-js"
 gem "config"
 
+gem "devise", "~> 4.1"
+gem "ffaker"
+gem "jquery-rails", "~> 4.3", ">= 4.3.1"
+gem "bootstrap_form", ">= 4.2.0"
+gem "config"
+gem "bcrypt", "3.1.12"
+gem "kaminari"
+gem "kaminari-bootstrap"
+gem "acts_as_votable", "~> 0.10.0"
+
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "rspec-rails"
+  gem "capybara"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -30,9 +43,12 @@ group :development do
 end
 
 group :test do
-  gem "capybara", ">= 2.15"
+  gem "capybara"
   gem "selenium-webdriver"
   gem "chromedriver-helper"
+  gem "shoulda-matchers", "~> 3.1"
+  gem "database_cleaner"
+  gem "rails-controller-testing"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

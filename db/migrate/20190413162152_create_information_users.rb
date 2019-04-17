@@ -15,7 +15,7 @@ class CreateInformationUsers < ActiveRecord::Migration[5.2]
       t.integer :education
       t.integer :religion
       t.integer :children
-      t.boolean :relationship_status
+      t.integer :relationship_status
 
       t.timestamps
     end
