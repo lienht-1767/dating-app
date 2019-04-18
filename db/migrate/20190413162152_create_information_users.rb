@@ -1,7 +1,6 @@
 class CreateInformationUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :information_users do |t|
-      t.references :interested_in_gender, foreign_key: true
       t.belongs_to :gender, index: true
       t.belongs_to :user, index: true
 
@@ -15,7 +14,7 @@ class CreateInformationUsers < ActiveRecord::Migration[5.2]
       t.integer :education
       t.integer :religion
       t.integer :children
-      t.integer :relationship_status
+      t.integer :relationship
 
       t.timestamps
     end

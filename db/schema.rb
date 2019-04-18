@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_13_163042) do
+ActiveRecord::Schema.define(version: 2019_04_16_024743) do
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
   end
 
   create_table "information_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "interested_in_gender_id"
     t.bigint "gender_id"
     t.bigint "user_id"
     t.string "first_name"
@@ -50,28 +49,11 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
     t.integer "education"
     t.integer "religion"
     t.integer "children"
-    t.integer "relationship_status"
+    t.integer "relationship"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["gender_id"], name: "index_information_users_on_gender_id"
-    t.index ["interested_in_gender_id"], name: "index_information_users_on_interested_in_gender_id"
     t.index ["user_id"], name: "index_information_users_on_user_id"
-  end
-
-  create_table "interested_in_genders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "gender_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["gender_id"], name: "index_interested_in_genders_on_gender_id"
-  end
-
-  create_table "interested_in_relations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "relationship_type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["relationship_type_id"], name: "index_interested_in_relations_on_relationship_type_id"
-    t.index ["user_id"], name: "index_interested_in_relations_on_user_id"
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,12 +73,6 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
     t.index ["user_id"], name: "index_participants_on_user_id"
   end
 
-  create_table "relationship_types", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.text "link"
@@ -107,25 +83,25 @@ ActiveRecord::Schema.define(version: 2019_04_13_163042) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "email"
-    t.string "password_digest"
-    t.string "remember_digest"
-    t.string "activation_digest"
-    t.boolean "activated"
     t.integer "popularity"
-    t.string "reset_digest"
-    t.datetime "reset_send_at"
     t.boolean "admin"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "blogs", "users"
   add_foreign_key "conversations", "users"
-  add_foreign_key "information_users", "interested_in_genders"
-  add_foreign_key "interested_in_genders", "genders"
-  add_foreign_key "interested_in_relations", "relationship_types"
-  add_foreign_key "interested_in_relations", "users"
   add_foreign_key "messages", "participants"
   add_foreign_key "participants", "conversations"
   add_foreign_key "participants", "users"

@@ -47,3 +47,101 @@ en:
       sign_up: "Sign up"
     footer:
       title: "Dating app - Design by Lien and Phuong Anh"
+  information_user:
+    new:
+      High_school: "High_school"
+      Vocational_school: "Vocational_school"
+      College: "College"
+      University: "University"
+      Masters: "Masters"
+      PhD: "PhD"
+      Single: "Single"
+      Married: "Married"
+      Divorced: "Divorced"
+      Widowed: "Widowed"
+      Complicated: "Complicated"
+      has_kids_not_live_with: "has_kids_not_live_with"
+      no_kid: "no_kid"
+      has_kids_live_with: "has_kids_live_with"
+      girl: "Girls"
+      boy: "Boys"
+      les: "Les"
+      gay: "Gay"
+      save_changes: "Save"
+    edit:
+      High_school: "High_school"
+      Vocational_school: "Vocational_school"
+      College: "College"
+      University: "University"
+      Masters: "Masters"
+      PhD: "PhD"
+      Single: "Single"
+      Married: "Married"
+      Divorced: "Divorced"
+      Widowed: "Widowed"
+      Complicated: "Complicated"
+      has_kids_not_live_with: "has_kids_not_live_with"
+      no_kid: "no_kid"
+      has_kids_live_with: "has_kids_live_with"
+      girl: "Girls"
+      boy: "Boys"
+      les: "Les"
+      gay: "Gay"
+      save_changes: "Save"
+    create:
+      success: "Created successfully"
+      fail: "Created fail"
+    update:
+      success: "Updated successfully"
+      fail: "Updated fail"
+  users:
+    registrations:
+      new:
+        sign_up: "Sign up"
+      edit:
+        edit: "Edit"
+        update: "Update"
+        back: "Back"
+    confirmations:
+      new:
+        resend: "Resend confirmation instructions"
+    mailer:
+      confirmation_instructions:
+        welcome: "Welcome  %{email}"
+        confirm: "You can confirm your account email through the link below:"
+        confirm_acc: "Confirm my account"
+      email_changed:
+        hello: "Hello  %{email}"
+        change_email: "We're contacting you to notify you that your email is being changed to %{email}"
+      password_change:
+        change_password: "We're contacting you to notify you that your password has been changed."
+      reset_password_instructions:
+        notice: "Someone has requested a link to change your password. You can do this through the link below."
+        change: "Change my password"
+        text1: "If you didn't request this, please ignore this email."
+        text2: "Your password won't change until you access the link above and create a new one."
+      unlock_instructions:
+        text1: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        click: "Click the link below to unlock your account:"
+        unlock: "Unlock my account"
+    password:
+      edit:
+        change: "Change your password"
+        confirm: "Confirm new password"
+      new:
+        forgot: "Forgot your password?"
+        send: "Send me reset password instructions"
+    sessions:
+      new:
+        log_in: "Log in"
+    shared:
+      links:
+        log_in: "Log in"
+        sign_up: "Sign up"
+        forgot: "Forgot your password?"
+        not_confirm: "Didn't receive confirmation instructions?"
+        not_unlock: "Didn't receive unlock instructions?"
+        sign_in: "Sign in with"
+    unlocks:
+      new:
+        resend: "Resend unlock instructions"
