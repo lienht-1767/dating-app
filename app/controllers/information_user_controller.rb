@@ -8,6 +8,7 @@ class InformationUserController < ApplicationController
   def create
     @info = InformationUser.new info_params
     if @info.save
+      @info.image.attach(params[:information_user][:image])
       flash[:success] = t(".success")
       redirect_to root_url
     else

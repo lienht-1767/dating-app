@@ -33,6 +33,7 @@
           options_for_select(show_children) %>
         <%= label_tag :religion %>
         <%= f.text_field :religion, class: "form-control" %>
+        <%= f.file_field :image %>
         <%= f.submit t(".save_changes"), class: "btn btn-primary" %>
         <% end %>
     </div>

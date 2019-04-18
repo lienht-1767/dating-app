@@ -34,6 +34,8 @@
           {selected: @info.children}) %>
         <%= label_tag :religion %>
         <%= f.text_field :religion, class: "form-control" %>
+        <%= image_tag(@info.image) if @info.image.attached? %>
+        <%= f.file_field :image %>
         <%= f.submit t(".save_changes"), class: "btn btn-primary" %>
         <% end %>
     </div>

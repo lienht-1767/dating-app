@@ -1,6 +1,7 @@
 class InformationUser < ApplicationRecord
   has_one :gender
   has_one :user
+  has_one_attached :image
 
   enum education: {High_school: 0, Vocational_school: 1, College: 2,
     University: 3, Masters: 4, PhD:5 }
