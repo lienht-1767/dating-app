@@ -60,3 +60,6 @@ config/environments/*.local.yml
 /public/uploads/*
 /.byebug_history
 log/test.log
+
+# Ignore application configuration
+/config/application.yml

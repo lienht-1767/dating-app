@@ -1,0 +1,41 @@
+<% provide :title, t(".create_user") %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3"></div>
+    <div class="col-md-6 col-md-offset-3">
+      <br>
+      <h1><%= t ".update_your_profile" %></h1>
+      <br>
+      <%= form_for @info, url: {action: :create, controller: :information_user} do |f| %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= label_tag :first_name %>
+        <%= f.text_field :first_name, class: "form-control" %>
+        <%= label_tag :last_name %>
+        <%= f.text_field :last_name, class: "form-control" %>
+        <%= label_tag :address %>
+        <%= f.text_field :address, class: "form-control" %>
+        <%= label_tag :gender %>
+        <%= f.select :gender_id, options_for_select(show_gender) %>
+        <%= label_tag :birthday %>
+        <%= f.date_field :birthday %>
+        <%= label_tag :height %>
+        <%= f.text_field :height, class: "form-control" %>
+        <%= label_tag :weight %>
+        <%= f.text_field :weight, class: "form-control" %>
+        <%= label_tag :education %>
+        <%= f.select :education,
+          options_for_select(show_education) %>
+        <%= label_tag :relationship %>
+        <%= f.select :relationship,
+          options_for_select(show_relationship) %>
+        <%= label_tag :children %>
+        <%= f.select :children,
+          options_for_select(show_children) %>
+        <%= label_tag :religion %>
+        <%= f.text_field :religion, class: "form-control" %>
+        <%= f.submit t(".save_changes"), class: "btn btn-primary" %>
+        <% end %>
+    </div>
+    <div class="col-md-3 col-md-offset-3"></div>
+  </div>
+</div>

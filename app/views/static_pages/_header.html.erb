@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="navbar-header">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag Settings.image_header %><%=  t ".title" %>
     <% end %>
   </div>
@@ -8,12 +8,35 @@
     <li class="nav-item">
       <%= link_to t(".blogs"), "#" %>
     </li>
-    <li class="nav-item">
-      <%= link_to t(".sign_in"), "#" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to t(".sign_up"), "#" %>
-    </li>
+    <% if user_signed_in? %>
+      <li class="dropdown">
+        <%= link_to "#", :"data-toggle" => 'dropdown', :class => "dropdown-toggle" do %>
+          <%= t(".account") %> <b class="caret"></b>
+        <% end %>
+        <ul class="dropdown-menu">
+          <% if current_user.information_user %>
+            <li>
+              <%= link_to t(".edit"), edit_information_user_path(current_user) %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to t(".create"), new_information_user_path(current_user) %>
+            </li>
+          <% end %>
+          <li class="divider"></li>
+          <li>
+            <%= link_to t(".log_out"), destroy_user_session_path, method: :delete %>
+          </li>
+        </ul>
+      </li>
+    <% else %>
+      <li class="nav-item">
+        <%= link_to t(".sign_in"), new_user_session_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to t(".sign_up"), new_user_registration_path %>
+      </li>
+    <% end %>
   </ul>
   <div class="clearfix"></div>
 </nav>
