@@ -5,6 +5,9 @@
     <% end %>
   </div>
   <ul class="nav navbar-top-links navbar-right">
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to "admin",  admin_path %>
+    <% end %>
     <li class="nav-item">
       <%= link_to t(".blogs"), "#" %>
     </li>

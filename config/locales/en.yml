@@ -3,6 +3,8 @@ en:
     title: "Dating"
   layouts:
     admin:
+      index:
+        title: "Admin"
       header:
         title: "Admin Dating app"
         change_password: "Change password"
@@ -145,3 +147,18 @@ en:
     unlocks:
       new:
         resend: "Resend unlock instructions"
+  admin:
+    genders:
+      index:
+        genders: "Gender"
+        format_time: "%R %d/%m/%Y"
+        stt: "STT"
+        name: "Name"
+        created_at: "Created at"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+        create: "Add new item"
+      new:
+        new: "Add new gender"
+        create_gender: "Save"

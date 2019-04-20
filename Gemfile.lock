@@ -322,9 +322,6 @@ DEPENDENCIES
   chromedriver-helper
   config
   database_cleaner
-  devise (~> 4.1)
-  factory_bot_rails
-  ffaker
   devise
   factory_bot_rails
   ffaker
