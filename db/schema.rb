@@ -45,10 +45,13 @@ ActiveRecord::Schema.define(version: 2019_04_18_080016) do
   end
 
   create_table "conversations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
+    t.integer "recipient_id"
+    t.integer "sender_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_conversations_on_user_id"
+    t.index ["recipient_id", "sender_id"], name: "index_conversations_on_recipient_id_and_sender_id", unique: true
+    t.index ["recipient_id"], name: "index_conversations_on_recipient_id"
+    t.index ["sender_id"], name: "index_conversations_on_sender_id"
   end
 
   create_table "genders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -78,20 +81,13 @@ ActiveRecord::Schema.define(version: 2019_04_18_080016) do
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "participant_id"
-    t.text "message_text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["participant_id"], name: "index_messages_on_participant_id"
-  end
-
-  create_table "participants", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "body"
     t.bigint "user_id"
     t.bigint "conversation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["conversation_id"], name: "index_participants_on_conversation_id"
-    t.index ["user_id"], name: "index_participants_on_user_id"
+    t.index ["conversation_id"], name: "index_messages_on_conversation_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -114,10 +110,8 @@ ActiveRecord::Schema.define(version: 2019_04_18_080016) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blogs", "users"
-  add_foreign_key "conversations", "users"
   add_foreign_key "information_users", "genders"
   add_foreign_key "information_users", "users"
-  add_foreign_key "messages", "participants"
-  add_foreign_key "participants", "conversations"
-  add_foreign_key "participants", "users"
+  add_foreign_key "messages", "conversations"
+  add_foreign_key "messages", "users"
 end

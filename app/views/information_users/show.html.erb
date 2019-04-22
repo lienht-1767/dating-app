@@ -8,7 +8,7 @@
       <h2><%= @info.first_name + " " + @info.last_name %></h2>
       <p><%= t ".gender" %> <%= show_name_gender(@info.gender_id) %></p>
       <p><%= t ".address" %> <%= @info.address %></p>
-      <%= link_to t(".send_message"), "#", class: "btn btn-success" %>
+      <%= link_to t(".send_message"), conversations_path(user_id: @info), remote: true, method: :post, class: "btn btn-success" %>
     </div>
   </div>
 </div>

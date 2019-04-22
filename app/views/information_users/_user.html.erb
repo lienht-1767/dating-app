@@ -1,10 +1,10 @@
-<% if @users.count == 0 %>
+<% if @information_users.count == 0 %>
 <div class="nofitication" >
   <h4><%= t ".no_result" %></h4>
 </div>
 <% else %>
 <div id="search-results" class="search-results">
-  <% @users.each do |user| %>
+  <% @information_users.each do |user| %>
   <div class="col-md-4 user">
     <div class="user-info">
       <div class="user-image">
@@ -29,5 +29,6 @@
   </div>
   <% end %>
 </div>
-<%= paginate @users %>
+<div class="clearfix"></div>
+<%= paginate @information_users %>
 <% end %>

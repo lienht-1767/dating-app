@@ -258,7 +258,7 @@ ul.nav.navbar-top-links.navbar-right li.dropdown a{
 .main-content{
   float: right;
 }
-.search-results .user {
+.search-results .user .user-info {
   text-align: center;
   background-color: #fff;
   display: inline-block;
@@ -292,14 +292,11 @@ ul.nav.navbar-top-links.navbar-right li.dropdown a{
   font-size: 16px;
   color: #999;
 }
-div#search-results .user {
-  margin-right: 20px;
-}
 form#information_user_search {
   display: inherit;
 }
 form#information_user_search input, form#information_user_search label, form#information_user_search select, {
-  width:200px;
+  width:20%;
 }
 form#information_user_search input[type="submit"] {
   margin-left: 340px;
@@ -308,4 +305,36 @@ form#information_user_search input[type="submit"] {
   margin-top: 20px;
   text-align: center;
   border: 1px solid #cdcdcd;
+}
+
+.row.content-1 {
+    display: block;
+}
+
+ul {
+  padding-left: 0px;
+  list-style: none;
+}
+
+.messages-list {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.message-sent {
+  position: relative;
+  background-color: #D9EDF7;
+  border-color: #BCE8F1;
+  margin: 5px 20px;
+  padding: 10px;
+  float: right;
+}
+
+.message-received {
+  background-color: #F1F0F0;
+  border-color: #EEEEEE;
+  margin: 5px 20px;
+  padding: 10px;
+  float: left;
 }

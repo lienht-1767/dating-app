@@ -19,6 +19,7 @@ en:
         title: "Dating app - Design by Lien and Phuong Anh"
   static_pages:
     header:
+      edit: "Edit"
       title: "Dating"
       blogs: "Blogs"
       sign_in: "Sign in"
@@ -45,6 +46,7 @@ en:
       or: "OR"
       sign_in: "Sign in"
       sign_up: "Sign up"
+      user_list: "User list"
     footer:
       title: "Dating app - Design by Lien and Phuong Anh"
     search:
@@ -161,3 +163,6 @@ en:
     unlocks:
       new:
         resend: "Resend unlock instructions"
+  conversations:
+    load_conversation:
+      converation_not_found: "converation_not_found"
