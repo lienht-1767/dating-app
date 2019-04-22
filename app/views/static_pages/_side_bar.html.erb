@@ -2,4 +2,9 @@
   <li>
     <h4 class="dashboard"><%= t ".inbox" %></h4>
   </li>
+  <ul id="conversations-list">
+    <% @conversations.each do |conversation| %>
+      <%= render "conversations/conversation", conversation: conversation, user: current_user %>
+    <% end %>
+  </ul>
 </ul>

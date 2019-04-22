@@ -4,7 +4,10 @@ class User < ApplicationRecord
   has_many :grades
   has_many :blogs
   has_many :user_photos
-  has_many :conversations
-  has_many :participants
+  has_many :interested_in_relations
+  has_many :messages
+  has_many :conversations, foreign_key: :sender_id
   has_one :information_user
+
+  scope :user_list, ->(user_id){where.not(id: user_id)}
 end

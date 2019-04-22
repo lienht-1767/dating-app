@@ -11,6 +11,7 @@ User.create!(
   confirmation_token: "8c80bbac5c4df6e9a85af6940ba1c3f3",
   confirmed_at: Time.zone.now,
   confirmation_sent_at: Time.zone.now)
+
 9.times do |n|
   email = "user-#{n+1}@gmail.com"
   User.create!(

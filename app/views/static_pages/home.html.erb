@@ -1,6 +1,7 @@
 <div class="content">
   <% if user_signed_in? %>
-    <div class="side-bar col-md-3">
+  <div>
+    <div class="col-md-3">
       <%= render "static_pages/side_bar" %>
     </div>
     <div class="main-content col-md-9">
@@ -9,7 +10,9 @@
       </div>
       <%= render "information_users/user" %>
     </div>
-    <div class="clearfix"></div>
+  </div>
+</div>
+  <div class="clearfix"></div>
   <% else %>
     <div class="block-1"></div>
     <div class="teaser animated">

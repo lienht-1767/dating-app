@@ -3,8 +3,6 @@ class InformationUser < ApplicationRecord
   has_one :user
   has_one_attached :image
 
-  delegate :name, to: :gender, prefix: true
-
   enum education: {High_school: 1, Vocational_school: 2, College: 3,
     University: 4, Masters: 5, PhD: 6}
   enum relationship: {Single: 1, Married: 2, Divorced: 3, Widowed: 4,
@@ -20,4 +18,6 @@ class InformationUser < ApplicationRecord
   validates :last_name, presence: true, length: {maximum: Settings.max_name_length}, length: {minimum: Settings.min_name_length}
   validates :address, presence: true
   validates :birthday, presence: true
+
+  scope :info_list, ->(user_id){where.not(id: user_id)}
 end

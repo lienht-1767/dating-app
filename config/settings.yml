@@ -6,4 +6,4 @@ image_size: "300x300"
 size_picture: 5
 min_name_length: 2
 max_name_length: 100
-per_page: 5
+per_page: 6
