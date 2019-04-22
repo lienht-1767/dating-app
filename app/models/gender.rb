@@ -1,4 +1,6 @@
 class Gender < ApplicationRecord
-  has_one :information_user
-  enum name: {Girls: 0, Boys: 1, Les: 2, Gay: 3}
+  has_many :information_user
+
+  scope :show_gender, ->{pluck :name, :id}
+  scope :name_gender, ->(gender_id){(find_by id: gender_id).name}
 end

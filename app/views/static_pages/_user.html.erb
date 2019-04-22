@@ -1,0 +1,11 @@
+<div class="row">
+<%= users.each do |u| %>
+  <div class="col-md-4">
+    <div class="user-info">
+      <% if (u.information_user && u.information_user ) %>
+        <%= u.information_user.first_name + " " + u.information_user.last_name %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+</div>

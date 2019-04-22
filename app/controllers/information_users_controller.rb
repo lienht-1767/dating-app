@@ -1,5 +1,7 @@
-class InformationUserController < ApplicationController
-  before_action :load_info, only: %i(edit update)
+class InformationUsersController < ApplicationController
+  before_action :load_info, only: %i(edit update show)
+
+  def show; end
 
   def new
     @info = InformationUser.new

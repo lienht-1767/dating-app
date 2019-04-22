@@ -1,0 +1,18 @@
+<%= search_form_for @q, url: {action: :home, controller: :static_pages} do |f| %>
+  <%= f.label :address %>
+  <%= f.search_field :description_or_address_cont %>
+  <%= f.label :gender %>
+  <%= f.select :gender_id_eq, options_for_select(show_gender, @q.gender_id_eq), {include_blank: t(".gender")} %>
+  <%= label_tag :education %>
+  <%= f.select :education_eq,
+    options_for_select(show_education, @q.education_eq), {include_blank: t(".education")} %>
+  <%= label_tag :relationship %>
+  <%= f.select :relationship_eq,
+    options_for_select(show_relationship, @q.relationship_eq), {include_blank: t(".relationship")} %>
+  <%= label_tag :children %>
+  <%= f.select :children_eq,
+    options_for_select(show_children, @q.children), {include_blank: t(".children")} %>
+  <%= label_tag :religion %>
+  <%= f.search_field :religion %>
+  <%= f.submit %>
+<% end %>
