@@ -258,7 +258,7 @@ ul.nav.navbar-top-links.navbar-right li.dropdown a{
 .main-content{
   float: right;
 }
-.search-results .user .user-info {
+.search-results .user .user-info{
   text-align: center;
   background-color: #fff;
   display: inline-block;
@@ -307,6 +307,14 @@ form#information_user_search input[type="submit"] {
   border: 1px solid #cdcdcd;
 }
 
+/*sidebar admin*/
+.navbar-header {
+  display: flex;
+}
+ul#side-menu {
+  display: block;
+}
+
 .row.content-1 {
     display: block;
 }
@@ -337,4 +345,20 @@ ul {
   margin: 5px 20px;
   padding: 10px;
   float: left;
+}
+/*admin table*/
+table#datatable {
+  text-align: center;
+}
+.search-results {
+  margin-top: 20px;
+}
+.image-information {
+  width: 300px;
+}
+.information.col-md-9 {
+  margin-bottom: 30px;
+}
+.container.content {
+  min-height: 600px;
 }

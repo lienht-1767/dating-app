@@ -1,7 +1,7 @@
 <%= search_form_for @q, url: {action: :home, controller: :static_pages} do |f| %>
   <%= f.label :address %>
   <%= f.search_field :description_or_address_cont %>
-  <%= f.label :gender %>
+  <%= label_tag :gender %>
   <%= f.select :gender_id_eq, options_for_select(show_gender, @q.gender_id_eq), {include_blank: t(".gender")} %>
   <%= label_tag :education %>
   <%= f.select :education_eq,
@@ -14,5 +14,5 @@
     options_for_select(show_children, @q.children), {include_blank: t(".children")} %>
   <%= label_tag :religion %>
   <%= f.search_field :religion %>
-  <%= f.submit %>
+  <%= f.submit t(".seacrh_btn"), class: "btn btn-success" %>
 <% end %>

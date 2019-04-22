@@ -3,6 +3,8 @@ en:
     title: "Dating"
   layouts:
     admin:
+      index:
+        title: "Admin"
       header:
         title: "Admin Dating app"
         change_password: "Change password"
@@ -54,6 +56,7 @@ en:
       education: "Select education"
       relationship: "Select relationship type"
       children: "Select children"
+      seacrh_btn: "Search"
   information_users:
     new:
       High_school: "High_school"
@@ -166,3 +169,65 @@ en:
   conversations:
     load_conversation:
       converation_not_found: "converation_not_found"
+  admin:
+    genders:
+      index:
+        genders: "Gender"
+        format_time: "%R %d/%m/%Y"
+        stt: "STT"
+        name: "Name"
+        created_at: "Created at"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+        create: "Add new item"
+        confirm: "Are you sure?"
+      new:
+        new: "Add new gender"
+        create_gender: "Save"
+      create:
+        created: "Created successfully"
+        create_unsuccess: "Create unsuccessfully"
+      edit:
+        edit_gender: "Edit gender"
+        save_change: "Save"
+      update:
+        updated: "Updated successfully"
+        fail: "Update unsuccessfully"
+      destroy:
+        deleted: "Deleted successfully"
+        fail: "Delete unsuccessfully"
+        foriegn_key: "Cannot delete because users have this gender"
+    users:
+      index:
+        users: "Users"
+        format_time: "%R %d/%m/%Y"
+        stt: "STT"
+        name: "Name"
+        created_at: "Created at"
+        action: "Action"
+        edit: "Edit"
+        delete: "Delete"
+        create: "Add new item"
+        confirm: "Are you sure?"
+      destroy:
+        deleted: "Deleted successfully"
+        delete_failed: "Delete unsuccessfully"
+      load_user:
+        user_not_found: "User not file"
+      show:
+        detail: "Detail user"
+        back: "Back to users"
+        name: "Name"
+        image: "Image"
+        gender: "Gender"
+        address: "Address"
+        birthday: "Birthday"
+        weight: "Weight"
+        height: "Height"
+        education: "Education"
+        relationship: "Relationship"
+        children: "Children"
+        created_at: "Created at"
+        format_time: "%R %d/%m/%Y"
+        birthday_format: "%d/%m/%Y"

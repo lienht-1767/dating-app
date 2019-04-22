@@ -31,7 +31,7 @@ temp = InformationUser.create!(
   first_name: FFaker::Name.name,
   last_name: FFaker::Name.name,
   address: FFaker::Lorem.sentence(5),
-  birthday: rand(10..20).years.from_now,
+  birthday: rand(10..20).years.ago,
   weight: rand(39..80),
   height: rand(140..180),
   education: rand(1..6),

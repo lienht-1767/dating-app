@@ -1,7 +1,9 @@
 class InformationUsersController < ApplicationController
   before_action :load_info, only: %i(edit update show)
 
-  def show; end
+  def show
+    @conversations = Conversation.includes(:recipient, :messages)
+  end
 
   def new
     @info = InformationUser.new

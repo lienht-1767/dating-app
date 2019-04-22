@@ -1,6 +1,9 @@
 <% provide :title, t(".detail_user") %>
-<div class="container">
-  <div class="information">
+<div class="container content">
+  <div class="col-md-3">
+    <%= render "static_pages/side_bar" %>
+  </div>
+  <div class="information col-md-9">
     <div class="image-information">
       <%= image_tag @info.image %>
     </div>
