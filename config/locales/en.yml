@@ -47,7 +47,12 @@ en:
       sign_up: "Sign up"
     footer:
       title: "Dating app - Design by Lien and Phuong Anh"
-  information_user:
+    search:
+      gender: "Select genders"
+      education: "Select education"
+      relationship: "Select relationship type"
+      children: "Select children"
+  information_users:
     new:
       High_school: "High_school"
       Vocational_school: "Vocational_school"
@@ -88,12 +93,23 @@ en:
       les: "Les"
       gay: "Gay"
       save_changes: "Save"
+      update_your_profile: "Update your profile"
     create:
       success: "Created successfully"
       fail: "Created fail"
     update:
       success: "Updated successfully"
       fail: "Updated fail"
+    show:
+      gender: "Gender:"
+      address: "Address:"
+      send_message: "Send message"
+    user:
+      no_result: "No result"
+  information_user:
+    missing: "is missing!"
+    validate_img: "needs to be a jpeg or png!"
+    should_be_less_than_5MB: "Image size needs to be less than 5 MB"
   users:
     registrations:
       new:

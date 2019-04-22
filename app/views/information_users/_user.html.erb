@@ -1,0 +1,33 @@
+<% if @users.count == 0 %>
+<div class="nofitication" >
+  <h4><%= t ".no_result" %></h4>
+</div>
+<% else %>
+<div id="search-results" class="search-results">
+  <% @users.each do |user| %>
+  <div class="col-md-4 user">
+    <div class="user-info">
+      <div class="user-image">
+        <%= link_to information_user_path(user) do %>
+          <%= image_tag user.image %>
+        <% end %>
+      </div>
+      <div class="user-details">
+        <div class="user-username">
+          <div class="status-indicator online"></div>
+          <%= link_to (user.first_name + " " + user.last_name), information_user_path(user) %>
+        </div>
+        <div class="user-bio">
+          <div class="status-indicator status-indicator-mobile online"></div>
+          <%= show_name_gender(user.gender_id) %>
+        </div>
+        <div class="user-location">
+          <%= user.address %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+<%= paginate @users %>
+<% end %>

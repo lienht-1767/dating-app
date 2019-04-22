@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def show_gender
-    Gender.names.keys
+    Gender.show_gender
   end
 
   def show_education
@@ -22,5 +22,9 @@ module ApplicationHelper
 
   def show_children
     InformationUser.children.keys
+  end
+
+  def show_name_gender gender_id
+    Gender.name_gender gender_id
   end
 end

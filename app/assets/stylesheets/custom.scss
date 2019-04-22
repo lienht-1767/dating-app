@@ -258,3 +258,54 @@ ul.nav.navbar-top-links.navbar-right li.dropdown a{
 .main-content{
   float: right;
 }
+.search-results .user {
+  text-align: center;
+  background-color: #fff;
+  display: inline-block;
+  height: 400px;
+  margin-bottom: 23px;
+  border-radius: 2px;
+  box-shadow: 0 0px 8px rgba(0,0,0,0.3);
+}
+.search-results .user .user-image {
+  background-color: #eee;
+}
+.search-results .user .user-image img {
+  width: 100%;
+  height: 250px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom: 1px solid #eee;
+}
+.search-results .user .user-details .user-username {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+.search-results .user .user-details .status-indicator {
+  border: 1px solid #fff;
+  vertical-align: middle;
+  display: inline-block;
+}
+.search-results .user .user-details .user-location {
+  font-size: 16px;
+  color: #999;
+}
+div#search-results .user {
+  margin-right: 20px;
+}
+form#information_user_search {
+  display: inherit;
+}
+form#information_user_search input, form#information_user_search label, form#information_user_search select, {
+  width:200px;
+}
+form#information_user_search input[type="submit"] {
+  margin-left: 340px;
+}
+.nofitication {
+  margin-top: 20px;
+  text-align: center;
+  border: 1px solid #cdcdcd;
+}
