@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get "/admin", to: "admin/base#home"
+  get "/admin", to: "admin/base#home", :as => "admin"
   root "static_pages#home"
   resources :information_users
   resources :users
@@ -9,5 +9,10 @@ Rails.application.routes.draw do
       post :close
     end
     resources :messages, only: [:create]
+  end
+  namespace :admin do
+    resources :blogs
+    resources :genders
+    resources :users
   end
 end

@@ -6,5 +6,6 @@ class StaticPagesController < ApplicationController
     @information_users = @q.result(distinct: true).page(params[:page]).per Settings.per_page
     @users = User.user_list(current_user)
     @conversations = Conversation.includes(:recipient, :messages)
+
   end
 end
