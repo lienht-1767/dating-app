@@ -14,5 +14,10 @@
       <p><%= t ".address" %> <%= @info.address %></p>
       <%= link_to t(".send_message"), conversations_path(user_id: @info), remote: true, method: :post, class: "btn btn-success" %>
     </div>
+    <% if user_signed_in? %>
+      <div id="follow_user">
+        <%= render :partial => "follows/follow_form", :locals => {:user => @user} %>
+      </div>
+    <% end %>
   </div>
 </div>

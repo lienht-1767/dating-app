@@ -422,3 +422,35 @@ form#new_user .actions input.btn.btn-success {
 span.created_at_mess {
   color: $created_at_mess;
 }
+
+#btn-unfollow {
+  border: 2px solid;
+  border-color: #333;
+  background-color: #333;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 9px;
+  padding: 0.5rem 0.8rem;
+}
+
+#btn-unfollow:hover{
+  background-color: #ee997b;
+  border-color: #ee997b;
+  color:#fff;
+}
+
+#btn-follow {
+  color: #000000;
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 30px;
+  font-size: 9px;
+  padding: 0.5rem 0.8rem;
+}
+
+#btn-follow:hover{
+  border-color:#ee997b;
+  background-color: #ee997b;
+  position:relative;
+}

@@ -24,7 +24,7 @@ gem "bootstrap_form", ">= 4.2.0"
 gem "bcrypt", "3.1.12"
 gem "kaminari"
 gem "kaminari-bootstrap"
-gem "acts_as_votable", "~> 0.10.0"
+gem "acts_as_follower", github: "tcocca/acts_as_follower", branch: "master"
 gem "ransack"
 gem "image_processing"
 
@@ -33,6 +33,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "capybara"
   gem "factory_bot_rails"
+  gem "pry"
 end
 
 group :development do
