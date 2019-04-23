@@ -1,8 +1,8 @@
 <li>
   <div class="row">
     <div class="<%= user.id == message.user_id ? "message-sent" : "message-received" %>">
-      <%= message.body %> <br>
-      <span><%= message.created_at %></span>
+      <p><%= message.body %></p>
+      <span class="created_at_mess"><%= I18n.localize message.created_at, format: :created_at %></span>
     </div>
   </div>
 </li>

@@ -18,8 +18,8 @@
           <%= link_to (user.first_name + " " + user.last_name), information_user_path(user) %>
         </div>
         <div class="user-bio">
-          <div class="status-indicator status-indicator-mobile online"></div>
           <%= show_name_gender(user.gender_id) %>
+          <p><%= show_age user %></p>
         </div>
         <div class="user-location">
           <%= user.address %>
