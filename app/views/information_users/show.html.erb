@@ -1,12 +1,16 @@
 <% provide :title, t(".detail_user") %>
-<div class="container">
-  <div class="information">
+<div class="container content">
+  <div class="col-md-3">
+    <%= render "static_pages/side_bar" %>
+  </div>
+  <div class="information col-md-9">
     <div class="image-information">
       <%= image_tag @info.image %>
     </div>
     <div class="information">
       <h2><%= @info.first_name + " " + @info.last_name %></h2>
       <p><%= t ".gender" %> <%= show_name_gender(@info.gender_id) %></p>
+      <p><%= t ".age" %> <%= show_age @info %></p>
       <p><%= t ".address" %> <%= @info.address %></p>
       <%= link_to t(".send_message"), conversations_path(user_id: @info), remote: true, method: :post, class: "btn btn-success" %>
     </div>

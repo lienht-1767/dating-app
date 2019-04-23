@@ -248,6 +248,10 @@ ul.nav.navbar-top-links.navbar-right li.dropdown a{
   color: #fff;
   font-weight: bold;
 }
+ul.nav.navbar-top-links.navbar-right li a:hover{
+  color: #c7c2c2;
+  background-color: #36414f;
+}
 
 /*side bar*/
 .side-bar{
@@ -258,7 +262,7 @@ ul.nav.navbar-top-links.navbar-right li.dropdown a{
 .main-content{
   float: right;
 }
-.search-results .user .user-info {
+.search-results .user .user-info{
   text-align: center;
   background-color: #fff;
   display: inline-block;
@@ -307,6 +311,14 @@ form#information_user_search input[type="submit"] {
   border: 1px solid #cdcdcd;
 }
 
+/*sidebar admin*/
+.navbar-header {
+  display: flex;
+}
+ul#side-menu {
+  display: block;
+}
+
 .row.content-1 {
     display: block;
 }
@@ -337,4 +349,64 @@ ul {
   margin: 5px 20px;
   padding: 10px;
   float: left;
+}
+/*admin table*/
+table#datatable {
+  text-align: center;
+}
+.search-results {
+  margin-top: 20px;
+}
+.image-information {
+  width: 300px;
+}
+.information.col-md-9 {
+  margin-bottom: 30px;
+}
+.container.content {
+  min-height: 600px;
+}
+
+form#new_user div.field:nth-child(5) {
+  display: flex;
+  padding-bottom: 10px;
+}
+input#user_remember_me {
+  width: 4%;
+}
+form#new_user div.field:nth-child(5) label {
+  padding-top: 3px;
+}
+form#new_user .actions {
+  width: 50%;
+  margin: 10px auto;
+}
+form#new_user .actions input.btn.btn-success {
+  width: 100%;
+  margin: 10px auto;
+}
+.log-in {
+  width: 50%;
+  margin: 10px auto;
+}
+.log-in {
+  width: 50%;
+  margin: 10px auto;
+  padding: 40px;
+  margin-bottom: 30px;
+  margin-top: 110px;
+  min-height: 460px;
+}
+.log-in-center h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+.search-box {
+  border: 1px solid #e2e1e1;
+  padding: 10px;
+}
+.search-results {
+  border: 1px solid #e2e1e1;
+  margin-bottom: 20px;
 }

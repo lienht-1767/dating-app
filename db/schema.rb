@@ -111,7 +111,7 @@ ActiveRecord::Schema.define(version: 2019_04_18_080016) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blogs", "users"
   add_foreign_key "information_users", "genders"
-  add_foreign_key "information_users", "users"
+  add_foreign_key "information_users", "users", on_delete: :cascade
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users"
 end
