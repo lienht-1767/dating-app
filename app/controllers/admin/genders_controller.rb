@@ -33,9 +33,9 @@ class Admin::GendersController < Admin::BaseController
   end
 
   def destroy
-    @destroy = Gender.includes(:information_user)
-    if @destroy.count == 0
-      @gender.destroy
+    @info = Gender.includes(:information_user)
+
+    if @info.count == 0
       if @gender.destroy
         flash[:success] = t(".deleted")
         redirect_to admin_genders_path

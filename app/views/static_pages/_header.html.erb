@@ -10,13 +10,10 @@
         <%= link_to t(".admin"),  admin_path %>
       </li>
     <% end %>
-    <li class="nav-item">
-      <%= link_to t(".blogs"), "#" %>
-    </li>
     <% if user_signed_in? %>
       <li class="dropdown">
-        <%= link_to "#", :"data-toggle" => 'dropdown', :class => "dropdown-toggle" do %>
-          <%= current_user.information_user.first_name %> <b class="caret"></b>
+        <%= link_to "#", data: {toggle: "dropdown"}, class: "dropdown-toggle" do %>
+          <%= current_user.information_user.first_name %>
         <% end %>
         <ul class="dropdown-menu">
           <% if current_user.information_user %>

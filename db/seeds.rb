@@ -30,13 +30,13 @@ temp = InformationUser.create!(
   gender_id: rand(1..4),
   first_name: FFaker::Name.name,
   last_name: FFaker::Name.name,
-  address: FFaker::Lorem.sentence(5),
-  birthday: rand(10..20).years.ago,
+  address: FFaker::Lorem.sentence(3),
+  birthday: rand(20..40).years.ago,
   weight: rand(39..80),
   height: rand(140..180),
   education: rand(1..6),
   relationship: rand(1..5),
   children: rand(1..3)
   )
-temp.image.attach(io: File.open(Rails.root.join("public", "a.jpg")), filename: '#{n}.png')
+temp.image.attach(io: File.open(Rails.root.join("public", "a.jpg")), filename: 'image.png')
 end

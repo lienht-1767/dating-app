@@ -21,7 +21,19 @@ class InformationUser < ApplicationRecord
 
   scope :info_list, ->(user_id){where.not(id: user_id)}
   scope :get_age, ->(id){find_by(id: id).birthday}
-  scope :birthday_age, lambda{|birthday_from, birthday_to|
-    ransack(month_year_gteq: birthday_from, month_year_lteq: birthday_to).result
+  scope :age_lteq, lambda{|age|
+    age_from = Date.today.year - age.to_i
+    where("birthday >= ?", Date.new(age_from))
   }
+  scope :age_gteq, lambda{|age|
+    year = Date.today.year - age.to_i
+    age_to = Date.new(year + 1) - 1
+    where("birthday <= ?", age_to)
+  }
+
+  private
+
+  def self.ransackable_scopes(auth_object = nil)
+    %i(age_gteq age_lteq)
+  end
 end

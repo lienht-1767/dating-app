@@ -133,7 +133,7 @@ ul#side-menu li a {
   width: 100%;
   top: 30%;
   left: 1%;
-  color: white;
+  color: $white;
   font-weight: bold;
 }
 .mt-4, .my-4 {
@@ -141,7 +141,7 @@ ul#side-menu li a {
 }
 .btn.btn-brand {
   border: none;
-  background-image: linear-gradient(140deg, #ff4d63 0, #4D63FF 100%);
+  background-image: linear-gradient(140deg, $shadow-1 0, $shadow-2 100%);
 }
 .btn.btn-prominent {
   border-radius: 50px !important;
@@ -160,10 +160,10 @@ ul#side-menu li a {
 }
 .block-1 a, .block-1 h1, .block-1 h4 {
   text-shadow: 0 0 5px #333;
-  color: #fff !important;
+  color: $white !important;
 }
 .text-shadow-light {
-  color: #fff;
+  color: $white;
 }
 .block-1{
   background-image: url('https://findmateasia.files.wordpress.com/2017/01/cropped-dating-picnic-couple-on-beach-shutterstock_64974040.jpg') ;
@@ -198,8 +198,8 @@ h4.tagline {
   width: 100%;
 }
 .text-block-2 .dark-back {
-  color: #fff;
-  text-shadow: 0 0 12px #0000fe;
+  color: $white;
+  text-shadow: 0 0 12px $dark-back;
   font-size: 250%;
 }
 .text-center.text-block-2 {
@@ -245,12 +245,12 @@ ul.nav.navbar-top-links.navbar-right li.dropdown {
   padding-top: 10px;
 }
 ul.nav.navbar-top-links.navbar-right li.dropdown a{
-  color: #fff;
+  color: $white;
   font-weight: bold;
 }
 ul.nav.navbar-top-links.navbar-right li a:hover{
-  color: #c7c2c2;
-  background-color: #36414f;
+  color: $a-hover-back;
+  background-color: $a-hover;
 }
 
 /*side bar*/
@@ -264,7 +264,7 @@ ul.nav.navbar-top-links.navbar-right li a:hover{
 }
 .search-results .user .user-info{
   text-align: center;
-  background-color: #fff;
+  background-color: $white;
   display: inline-block;
   height: 400px;
   margin-bottom: 23px;
@@ -272,7 +272,7 @@ ul.nav.navbar-top-links.navbar-right li a:hover{
   box-shadow: 0 0px 8px rgba(0,0,0,0.3);
 }
 .search-results .user .user-image {
-  background-color: #eee;
+  background-color: $e;
 }
 .search-results .user .user-image img {
   width: 100%;
@@ -288,13 +288,13 @@ ul.nav.navbar-top-links.navbar-right li a:hover{
   margin-right: 10px;
 }
 .search-results .user .user-details .status-indicator {
-  border: 1px solid #fff;
+  border: 1px solid $white;
   vertical-align: middle;
   display: inline-block;
 }
 .search-results .user .user-details .user-location {
   font-size: 16px;
-  color: #999;
+  color: $black;
 }
 form#information_user_search {
   display: inherit;
@@ -308,7 +308,7 @@ form#information_user_search input[type="submit"] {
 .nofitication {
   margin-top: 20px;
   text-align: center;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $gray-light;
 }
 
 /*sidebar admin*/
@@ -336,20 +336,29 @@ ul {
 
 .message-sent {
   position: relative;
-  background-color: #D9EDF7;
-  border-color: #BCE8F1;
+  background-color: $message-sent-border;
+  border-color: $message-sent-border;
   margin: 5px 20px;
   padding: 10px;
-  float: right;
+  margin-left: 40%;
+  width: 50%;
+}
+.message-sent p {
+  word-wrap: break-word;
 }
 
 .message-received {
-  background-color: #F1F0F0;
-  border-color: #EEEEEE;
+  background-color: $back_mess;
+  border-color: $mes_rep;
   margin: 5px 20px;
   padding: 10px;
-  float: left;
+  margin-right: 5px;
+  width: 50%;
 }
+.message-received p {
+  word-wrap: break-word;
+}
+
 /*admin table*/
 table#datatable {
   text-align: center;
@@ -403,10 +412,13 @@ form#new_user .actions input.btn.btn-success {
   font-weight: bold;
 }
 .search-box {
-  border: 1px solid #e2e1e1;
+  border: 1px solid $search;
   padding: 10px;
 }
 .search-results {
-  border: 1px solid #e2e1e1;
+  border: 1px solid $search;
   margin-bottom: 20px;
+}
+span.created_at_mess {
+  color: $created_at_mess;
 }
