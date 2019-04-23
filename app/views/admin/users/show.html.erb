@@ -26,13 +26,13 @@
               <td><%= image_tag @info.image %></td>
               <td><%= show_name_gender(@info.gender_id) %></td>
               <td><%= @info.address %></td>
-              <td><%= @info.birthday.to_time.strftime t(".birthday_format") %></td>
+              <td><%= I18n.localize @info.birthday, format: :birthday_format %></td>
               <td><%= @info.weight %></td>
               <td><%= @info.height %></td>
               <td><%= @info.education %></td>
               <td><%= @info.relationship %></td>
               <td><%= @info.children %></td>
-              <td><%= @info.created_at.to_time.strftime t(".format_time") %></td>
+              <td><%= I18n.localize @info.created_at, format: :created_at %></td>
             </tr>
           </tbody>
         </table>

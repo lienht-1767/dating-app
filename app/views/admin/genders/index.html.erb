@@ -18,7 +18,7 @@
             <tr>
               <td><%= create_index params[:page], index, Settings.per_page %></td>
               <td><%= gender.name %></td>
-              <td><%= gender.created_at.to_time.strftime t(".format_time") %></td>
+              <td><%= I18n.localize gender.created_at, format: :created_at %></td>
               <td>
                 <%= link_to t(".edit"), edit_admin_gender_path(gender.id),
                   class: "btn btn-warning" %>

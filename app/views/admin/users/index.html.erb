@@ -18,7 +18,7 @@
               <td><%= create_index params[:page], index, Settings.per_page %></td>
               <td><%= user.information_user.first_name + " " +
                 user.information_user.last_name %></td>
-              <td><%= user.created_at.to_time.strftime t(".format_time") %></td>
+              <td><%= I18n.localize user.created_at, format: :created_at %></td>
               <td><%= link_to t(".detail"), admin_user_path(user),
                 class: "btn btn-warning" %></td>
               <td>

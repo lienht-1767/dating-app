@@ -33,8 +33,9 @@ class Admin::GendersController < Admin::BaseController
   end
 
   def destroy
-    @a = Gender.includes(:information_user)
-    if @a.count == 0
+    @destroy = Gender.includes(:information_user)
+
+    if @destroy.count == 0
       @gender.destroy
       if @gender.destroy
         flash[:success] = t(".deleted")

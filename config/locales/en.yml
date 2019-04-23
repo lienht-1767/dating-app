@@ -109,6 +109,7 @@ en:
       gender: "Gender:"
       address: "Address:"
       send_message: "Send message"
+      age: "Age:"
     user:
       no_result: "No result"
   information_user:
@@ -231,3 +232,7 @@ en:
         created_at: "Created at"
         format_time: "%R %d/%m/%Y"
         birthday_format: "%d/%m/%Y"
+  time:
+    formats:
+      birthday_format: "%d/%m/%Y"
+      created_at: "%R %d/%m/%Y"

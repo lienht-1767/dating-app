@@ -1,6 +1,8 @@
 <%= search_form_for @q, url: {action: :home, controller: :static_pages} do |f| %>
   <%= f.label :address %>
   <%= f.search_field :description_or_address_cont %>
+  <%= label_tag :religion %>
+  <%= f.search_field :religion %>
   <%= label_tag :gender %>
   <%= f.select :gender_id_eq, options_for_select(show_gender, @q.gender_id_eq), {include_blank: t(".gender")} %>
   <%= label_tag :education %>
@@ -12,7 +14,12 @@
   <%= label_tag :children %>
   <%= f.select :children_eq,
     options_for_select(show_children, @q.children), {include_blank: t(".children")} %>
-  <%= label_tag :religion %>
-  <%= f.search_field :religion %>
+  <%= label_tag :age %>
+  <br>
+  <%= f.label :from %>
+  <%= f.text_field :birthday_gteq %>
+
+  <%= f.label :to %>
+  <%= f.text_field :birthday_lteq %>
   <%= f.submit t(".seacrh_btn"), class: "btn btn-success" %>
 <% end %>

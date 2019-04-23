@@ -20,4 +20,8 @@ class InformationUser < ApplicationRecord
   validates :birthday, presence: true
 
   scope :info_list, ->(user_id){where.not(id: user_id)}
+  scope :get_age, ->(id){find_by(id: id).birthday}
+  scope :birthday_age, lambda{|birthday_from, birthday_to|
+    ransack(month_year_gteq: birthday_from, month_year_lteq: birthday_to).result
+  }
 end
