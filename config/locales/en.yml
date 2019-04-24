@@ -236,3 +236,12 @@ en:
     formats:
       birthday_format: "%d/%m/%Y"
       created_at: "%R %d/%m/%Y"
+  follows:
+    load_user:
+      user_not_found: "User not found!"
+    follow_form:
+      interseted: "Interseted"
+      interseting: "Interseting"
+      person_interseted_you: " person interseted you."
+      block: "Block"
+

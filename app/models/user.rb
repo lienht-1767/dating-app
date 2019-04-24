@@ -10,4 +10,7 @@ class User < ApplicationRecord
   has_one :information_user
 
   scope :user_list, ->(user_id){where.not(id: user_id)}
+
+  acts_as_followable
+  acts_as_follower
 end

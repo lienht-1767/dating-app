@@ -1,0 +1,9 @@
+<div class="follow-button-area" id="user-<%=@user.id%>" style="float: left">
+  <% if current_user.following? @user %>
+    <%= button_to t(".interseted"), {action: :unfollow, controller: :follows, id: @user.id}, method: "post", class: "btn btn-secondary btn-unfollow header-align", remote: true %>
+  <% elsif current_user != @user %>
+    <%= button_to t(".interseting"), {action: :follow, controller: :follows, id: @user.id}, method: "post", class: "btn btn-primary btn-unfollow header-align", remote: true %>
+  <% end %>
+  <%= @user.followers.count %><%= t".person_interseted_you" %>
+  <%= link_to t(".block"), "#", class: "btn btn-danger" %>
+</div>
