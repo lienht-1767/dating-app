@@ -49,6 +49,7 @@ en:
       sign_in: "Sign in"
       sign_up: "Sign up"
       user_list: "User list"
+      notice: "You have to update your profile."
     footer:
       title: "Dating app - Design by Lien and Phuong Anh"
     search:
@@ -244,4 +245,16 @@ en:
       interseting: "Interseting"
       person_interseted_you: " person interseted you."
       block: "Block"
-
+  date:
+    formats:
+      birthday_format: "%d/%m/%Y"
+      created_at: "%R %d/%m/%Y"
+  High_school: "High school"
+  Vocational_school: "Vocational school"
+  College: "College"
+  University: "University"
+  Masters: "Masters"
+  PhD: "PhD"
+  has_kids_not_live_with: "Has kids not live with"
+  no_kid: "No kid"
+  has_kids_live_with: "Has kids live with"

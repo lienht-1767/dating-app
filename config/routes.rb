@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {sessions: :users}
   get "/admin", to: "admin/base#home", :as => "admin"
   root "static_pages#home"
 
