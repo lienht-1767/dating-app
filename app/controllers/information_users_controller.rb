@@ -1,10 +1,9 @@
 class InformationUsersController < ApplicationController
   before_action :load_info, only: %i(edit update show)
   before_action :load_user, only: %i(show)
+  before_action :load_conversation, only: %i(show edit new)
 
-  def show
-    @conversations = Conversation.includes(:recipient, :messages)
-  end
+  def show; end
 
   def new
     @info = InformationUser.new
@@ -50,7 +49,13 @@ class InformationUsersController < ApplicationController
   def load_user
     @user = User.find_by id: params[:id]
     return if @user
-    flash[:error] = "not"
+    flash[:error] = t(".not_found")
+  end
+
+  def load_conversation
+    @conversations = Conversation.includes(:recipient, :messages)
+    return if @conversations
+    flash[:error] = t(".not_found")
     redirect_to root_path
   end
 end

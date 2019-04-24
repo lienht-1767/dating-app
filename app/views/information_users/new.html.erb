@@ -19,7 +19,7 @@
         <%= label_tag :gender %>
         <%= f.select :gender_id, options_for_select(show_gender) %>
         <%= label_tag :birthday %>
-        <%= f.date_field :birthday %>
+        <%= f.date_field :birthday, min: (I18n.localize 100.year.ago, format: :birthday_format), max: (I18n.localize Date.today, format: :birthday_format) %>
         <%= label_tag :height %>
         <%= f.text_field :height, class: "form-control" %>
         <%= label_tag :weight %>

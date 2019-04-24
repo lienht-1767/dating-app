@@ -3,11 +3,13 @@ class InformationUser < ApplicationRecord
   belongs_to :user
   has_one_attached :image
 
-  enum education: {High_school: 1, Vocational_school: 2, College: 3,
-    University: 4, Masters: 5, PhD: 6}
+  enum education: {I18n.t("High_school") => 1, I18n.t("Vocational_school") => 2,
+    I18n.t("College") => 3, I18n.t("University") => 4, I18n.t("Masters") => 5,
+    I18n.t("PhD") => 6}
   enum relationship: {Single: 1, Married: 2, Divorced: 3, Widowed: 4,
     Complicated: 5}
-  enum children: {has_kids_not_live_with: 1, no_kid: 2, has_kids_live_with: 3}
+  enum children: {I18n.t("has_kids_not_live_with") => 1, I18n.t("no_kid") => 2,
+    I18n.t("has_kids_live_with") => 3}
 
   INFORMATION_PARAMS = [:user_id, :first_name, :last_name,
     :gender_id, :birthday, :weight, :height, :address, :education,
@@ -19,7 +21,7 @@ class InformationUser < ApplicationRecord
   validates :address, presence: true
   validates :birthday, presence: true
 
-  scope :info_list, ->(user_id){where.not(id: user_id)}
+  scope :info_list, ->(id){where.not(id: id)}
   scope :get_age, ->(id){find_by(id: id).birthday}
   scope :age_lteq, lambda{|age|
     age_from = Date.today.year - age.to_i

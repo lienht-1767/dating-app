@@ -13,12 +13,12 @@
     <% if user_signed_in? %>
       <li class="dropdown">
         <%= link_to "#", data: {toggle: "dropdown"}, class: "dropdown-toggle" do %>
-          <%= current_user.information_user.first_name %>
+          <%= current_user.information_user.first_name + " " + current_user.information_user.last_name if current_user.information_user %>
         <% end %>
         <ul class="dropdown-menu">
           <% if current_user.information_user %>
             <li>
-              <%= link_to t(".edit"), edit_information_user_path(current_user) %>
+              <%= link_to t(".edit"), edit_information_user_path(current_user.information_user) %>
             </li>
           <% else %>
             <li>
