@@ -154,7 +154,7 @@ en:
       new:
         forgot: "Forgot your password?"
         send: "Send me reset password instructions"
-    sessions:
+    users:
       new:
         log_in: "Log in"
     shared:

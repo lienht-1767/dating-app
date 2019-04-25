@@ -9,34 +9,35 @@
       <%= form_for @info, url: {action: :create, controller: :information_users} do |f| %>
         <%= render "shared/error_messages", object: f.object %>
         <%= f.hidden_field :user_id, value: current_user.id %>
+        <%= label_tag :image, nil, class: "col-md-3" %>
         <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
-        <%= label_tag :first_name %>
-        <%= f.text_field :first_name, class: "form-control" %>
-        <%= label_tag :last_name %>
-        <%= f.text_field :last_name, class: "form-control" %>
-        <%= label_tag :address %>
-        <%= f.text_field :address, class: "form-control" %>
-        <%= label_tag :gender %>
-        <%= f.select :gender_id, options_for_select(show_gender) %>
-        <%= label_tag :birthday %>
-        <%= f.date_field :birthday, min: (I18n.localize 100.year.ago, format: :birthday_format), max: (I18n.localize Date.today, format: :birthday_format) %>
-        <%= label_tag :height %>
-        <%= f.text_field :height, class: "form-control" %>
-        <%= label_tag :weight %>
-        <%= f.text_field :weight, class: "form-control" %>
-        <%= label_tag :education %>
+        <%= label_tag :first_name, nil, class: "col-md-3" %>
+        <%= f.text_field :first_name, class: "form-control col-md-8" %>
+        <%= label_tag :last_name, nil, class: "col-md-3" %>
+        <%= f.text_field :last_name, class: "form-control col-md-8" %>
+        <%= label_tag :address, nil, class: "col-md-3" %>
+        <%= f.text_field :address, class: "form-control col-md-8" %>
+        <%= label_tag :gender, nil, class: "col-md-3" %>
+        <%= f.select :gender_id, options_for_select(show_gender),{}, {class: "form-control col-md-8"} %>
+        <%= label_tag :birthday, nil, class: "col-md-3" %>
+        <%= f.date_field :birthday, min: (I18n.localize 100.year.ago, format: :birthday_format), max: (I18n.localize Date.today, format: :birthday_format),:class => "col-md-8" %>
+        <%= label_tag :height, nil, class: "col-md-3" %>
+        <%= f.text_field :height, class: "form-control col-md-8" %>
+        <%= label_tag :weight, nil, class: "col-md-3" %>
+        <%= f.text_field :weight, class: "form-control col-md-8" %>
+        <%= label_tag :education, nil, class: "col-md-3" %>
         <%= f.select :education,
-          options_for_select(show_education) %>
-        <%= label_tag :relationship %>
+          options_for_select(show_education),{}, {class: "form-control col-md-8"} %>
+        <%= label_tag :relationship, nil, class: "col-md-3" %>
         <%= f.select :relationship,
-          options_for_select(show_relationship) %>
-        <%= label_tag :children %>
+          options_for_select(show_relationship),{}, {class: "form-control col-md-8"} %>
+        <%= label_tag :children, nil, class: "col-md-3" %>
         <%= f.select :children,
-          options_for_select(show_children) %>
-        <%= label_tag :religion %>
-        <%= f.text_field :religion, class: "form-control" %>
-        <%= label_tag :description %>
-        <%= f.text_field :description, class: "form-control" %>
+          options_for_select(show_children),{}, {class: "form-control col-md-8"} %>
+        <%= label_tag :religion, nil, class: "col-md-3" %>
+        <%= f.text_field :religion, class: "form-control col-md-8" %>
+        <%= label_tag :description, nil, class: "col-md-3" %>
+        <%= f.text_field :description, class: "form-control col-md-8" %>
         <%= f.submit t(".save_changes"), class: "btn btn-primary" %>
       <% end %>
     </div>

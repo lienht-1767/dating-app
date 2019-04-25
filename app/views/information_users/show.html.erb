@@ -1,5 +1,5 @@
 <% provide :title, t(".detail_user") %>
-<div class="container content">
+<div class="content">
   <div class="col-md-3">
     <%= render "static_pages/side_bar" %>
   </div>
@@ -7,17 +7,22 @@
     <div class="image-information">
       <%= image_tag @info.image %>
     </div>
-    <div class="information">
-      <h2><%= @info.first_name + " " + @info.last_name %></h2>
-      <p><%= t ".gender" %> <%= show_name_gender(@info.gender_id) %></p>
-      <p><%= t ".age" %> <%= show_age @info %></p>
-      <p><%= t ".address" %> <%= @info.address %></p>
-      <%= link_to t(".send_message"), conversations_path(user_id: @info), remote: true, method: :post, class: "btn btn-success" %>
-    </div>
-    <% if user_signed_in? %>
-      <div id="follow_user">
-        <%= render :partial => "follows/follow_form", :locals => {:user => @user} %>
+    <div class="information-detail">
+      <div class="detail-user col-md-3">
+        <h2><%= @info.first_name + " " + @info.last_name %></h2>
+        <p><%= t ".gender" %> <%= show_name_gender(@info.gender_id) %></p>
+        <p><%= t ".age" %> <%= show_age @info %></p>
+        <p><%= t ".address" %> <%= @info.address %></p>
+        <div class="send-mess">
+        <%= link_to t(".send_message"), conversations_path(user_id: @info), remote: true, method: :post, class: "btn btn-success" %>
+
+        </div>
       </div>
-    <% end %>
+      <% if user_signed_in? %>
+        <div id="follow_user" class="col-md-8">
+          <%= render :partial => "follows/follow_form", :locals => {:user => @user} %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

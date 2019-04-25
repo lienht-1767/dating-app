@@ -3,7 +3,6 @@
   <h4><%= t ".no_result" %></h4>
 </div>
 <% else %>
-<div id="search-results" class="search-results">
   <% @information_users.each do |user| %>
   <div class="col-md-4 user">
     <div class="user-info">
@@ -28,7 +27,6 @@
     </div>
   </div>
   <% end %>
-</div>
 <div class="clearfix"></div>
 <%= paginate @information_users %>
 <% end %>

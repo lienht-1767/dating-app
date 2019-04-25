@@ -18,6 +18,10 @@ class Conversation < ApplicationRecord
     create(sender_id: sender_id, recipient_id: recipient_id)
   end
 
+  def self.get_conversation user_id
+    Conversation.where(sender_id: user_id).or(Conversation.where recipient_id: user_id)
+  end
+
   def opposed_user user
     user == recipient ? sender : recipient
   end

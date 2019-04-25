@@ -114,6 +114,7 @@ ul#side-menu li a {
 }
 .navbar-header a.navbar-brand img {
   width: 32px;
+  height: 32px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
@@ -266,7 +267,7 @@ ul.nav.navbar-top-links.navbar-right li a:hover{
   text-align: center;
   background-color: $white;
   display: inline-block;
-  height: 400px;
+  min-height: 430px;
   margin-bottom: 23px;
   border-radius: 2px;
   box-shadow: 0 0px 8px rgba(0,0,0,0.3);
@@ -367,14 +368,12 @@ table#datatable {
   margin-top: 20px;
 }
 .image-information {
-  width: 300px;
-  height: 300px;
+  /*width: 300px;*/
+  /*height: 300px;*/
+  background-color: black;
 }
 .information.col-md-9 {
   margin-bottom: 30px;
-}
-.container.content {
-  min-height: 600px;
 }
 
 form#new_user div.field:nth-child(5) {
@@ -397,14 +396,14 @@ form#new_user .actions input.btn.btn-success {
 }
 .log-in {
   width: 50%;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 .log-in {
   width: 50%;
-  margin: 10px auto;
+  /*margin: 10px auto;*/
   padding: 40px;
   margin-bottom: 30px;
-  margin-top: 110px;
+  /*margin-top: 110px;*/
   min-height: 460px;
 }
 .log-in-center h2 {
@@ -419,6 +418,7 @@ form#new_user .actions input.btn.btn-success {
 .search-results {
   border: 1px solid $search;
   margin-bottom: 20px;
+  padding-top: 20px;
 }
 span.created_at_mess {
   color: $created_at_mess;
@@ -458,16 +458,32 @@ span.created_at_mess {
 .field.sign-up {
   display: block !important;
 }
-.container.main-content {
-  min-height: 510px;
+.content-main {
+  min-height: 535px;
 }
 .image-information img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
 }
 .col-md-6.form-info {
   margin-bottom: 20px;
 }
 .col-md-6.form-info h1{
   text-align: center;
+}
+.page-footer .page-footer-inner {
+  margin: 17px auto;
+}
+ul.pagination {
+  float: right;
+}
+.information-detail {
+    border: 1px solid #cdcdcd;
+    margin: 10px auto;
+    padding: 10px;
+    height: 200px;
+}
+div#follow_user {
+  margin-top: 12%;
 }

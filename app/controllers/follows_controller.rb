@@ -16,8 +16,9 @@ class FollowsController < ApplicationController
   private
 
   def load_user
-    @user = User.find_by id: params[:id]
-    return if @user
+    @info = InformationUser.find_by id: params[:id]
+    @user = User.find_by(id: @info.user_id)
+    return if @user && @info
     flash[:error] = "user_not_found"
     redirect_to root_path
   end

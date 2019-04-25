@@ -47,13 +47,13 @@ class InformationUsersController < ApplicationController
   end
 
   def load_user
-    @user = User.find_by id: params[:id]
+    @user = User.find_by(id: @info.user_id)
     return if @user
     flash[:error] = t(".not_found")
   end
 
   def load_conversation
-    @conversations = Conversation.includes(:recipient, :messages)
+    @conversations = Conversation.get_conversation(current_user)
     return if @conversations
     flash[:error] = t(".not_found")
     redirect_to root_path
